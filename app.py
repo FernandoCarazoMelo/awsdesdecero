@@ -1,5 +1,8 @@
 from flask import Flask, render_template, jsonify
 
+import os
+
+
 app = Flask(__name__)
 
 JOBS = [
@@ -31,17 +34,36 @@ def inicio():
     return render_template("index.html", jobs=JOBS, company_name="Jovian")
 
 
-@app.route("/blog")
-def blog():
-    return render_template("base-article.html")
+@app.route("/post")
+def post():
+    return render_template("posts.html", jobs=JOBS, company_name="Jovian")
 
-@app.route("/contact-us")
-def contact():
+    # return render_template("base-article.html")
+
+@app.route("/contactus")
+def contactus():
     return render_template("pages/contact-us.html",)
 
 @app.route("/api/jobs")
 def list_jobs():
     return jsonify(JOBS)
+
+@app.route('/aws/<file>')
+def aws_service(file):
+    return render_template('ejemplo_individual.html', file=file)
+
+@app.route('/aws-services')
+def aws():
+    jpg_files = [f for f in os.listdir('static/img/aws') if f.endswith('.png')]
+    # sort files by name
+    jpg_files = sorted(jpg_files)
+    # For each element, select what is between - and .png
+    file_names = [f.split('-')[1] for f in jpg_files]
+    file_names = [f.split('.')[0] for f in file_names]
+    file_names_no_spaces = [f.replace(' ', '-') for f in file_names]
+    
+    file_info = list(zip(jpg_files, file_names, file_names_no_spaces))
+    return render_template('gallery_template.html', file_info=file_info)
 
 
 

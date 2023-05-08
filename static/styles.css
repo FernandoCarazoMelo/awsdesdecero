@@ -4724,6 +4724,12 @@ fieldset:disabled .btn {
   transform: scale(1.1);
 }
 
+.card-small {
+  font-size: 12px;
+  width: 200px;
+  height: 350px;
+}
+
 
 .card-body {
   flex: 1 1 auto;

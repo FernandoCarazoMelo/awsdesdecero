@@ -1,0 +1,36 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+Escuela AWS
+{% endblock %}
+
+{% block subtitle %}
+Aprende, practica, certifícate en AWS
+{% endblock %}
+
+{% block content %}
+
+<div class="container px-4 px-lg-5">
+    <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+        {% for file, file_name, file_names_no_spaces in file_info %}
+
+
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
+
+            <a href="{{ url_for('aws_service', file=file_names_no_spaces + '.html') }}">
+
+                <div class="card card-small ">
+                    <img class="card-img-top" src="{{ url_for('static', filename='img/aws/' + file) }}"
+                        alt="{{ file_name }}" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ file_name }}</h5>
+                        <p class="card-text">Description of {{ file_name }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
