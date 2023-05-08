@@ -26,13 +26,23 @@ JOBS = [
 
 
 @app.route("/")
-def hello_jovian():
-    return render_template("home.html", jobs=JOBS, company_name="Jovian")
+@app.route("/index.html")
+def inicio():
+    return render_template("index.html", jobs=JOBS, company_name="Jovian")
 
+
+@app.route("/blog")
+def blog():
+    return render_template("base-article.html")
+
+@app.route("/contact-us")
+def contact():
+    return render_template("pages/contact-us.html",)
 
 @app.route("/api/jobs")
 def list_jobs():
     return jsonify(JOBS)
+
 
 
 if __name__ == "__main__":
