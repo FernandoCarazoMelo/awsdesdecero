@@ -12,12 +12,12 @@ Aprende, practica, certifícate en AWS
 
 <div class="container px-4 px-lg-5">
     <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
-        {% for file, file_name, file_names_no_spaces in file_info %}
+        {% for file, file_no_spaces, file_name, file_names_no_spaces in file_info %}
 
 
         <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mb-4">
 
-            <a href="{{ url_for('aws_service', file=file_names_no_spaces + '.html') }}">
+            <a href="{{ url_for('aws_service', file=file_no_spaces + '.html') }}">
 
                 <div class="card card-small ">
                     <img class="card-img-top" src="{{ url_for('static', filename='img/aws/' + file) }}"

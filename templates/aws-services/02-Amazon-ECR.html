@@ -1,0 +1,34 @@
+<h1>Qué es Docker:</h1>
+<p>En el mundo de la informática, Docker es un término que se ha vuelto cada vez más popular. Si no estás familiarizado
+    con él, ¡no te preocupes! En este artículo te explicamos todo lo que necesitas saber sobre Docker.</p>
+<p>Docker es una plataforma de contenedores de software que te permite crear, distribuir y ejecutar aplicaciones de
+    manera fácil y rápida. Esencialmente, Docker te permite empaquetar una aplicación con todas sus dependencias en un
+    contenedor, lo que significa que puedes ejecutar esa aplicación en cualquier sistema operativo y en cualquier
+    infraestructura de nube. Docker es especialmente útil en entornos en los que necesitas ejecutar múltiples
+    aplicaciones en la misma máquina, ya que los contenedores son ligeros y portátiles.</p>
+<p>En lugar de instalar y configurar manualmente cada componente de una aplicación, Docker te permite crear una imagen
+    de contenedor que contiene todos los componentes necesarios. Luego, puedes utilizar esa imagen para crear y ejecutar
+    un contenedor de Docker que tenga exactamente la misma configuración que la imagen. Esto significa que tus
+    aplicaciones siempre se ejecutan en el mismo entorno, independientemente de la infraestructura subyacente.</p>
+<h1>Qué es Amazon ECR:</h1>
+<p>Amazon Elastic Container Registry (ECR) es un servicio de registro de contenedores de Docker completamente
+    administrado que te permite almacenar, administrar y proteger tus imágenes de Docker en AWS. ECR es una solución
+    segura y escalable para almacenar imágenes de contenedor de Docker y es compatible con el registro de Docker v2.</p>
+<p>ECR te permite almacenar tus imágenes de Docker en repositorios de ECR. Cada repositorio es un contenedor de Docker
+    que contiene una o más imágenes de contenedor. Los repositorios de ECR son privados y solo los usuarios autorizados
+    pueden acceder a ellos. Además, ECR ofrece integración con AWS Identity and Access Management (IAM), lo que te
+    permite controlar quién tiene acceso a tus imágenes de Docker.</p>
+<p>ECR también ofrece funciones avanzadas de administración de imágenes, como etiquetas y versiones. Puedes agregar
+    etiquetas a tus imágenes de Docker para identificarlas y administrarlas más fácilmente. Además, puedes crear
+    versiones de tus imágenes de Docker para realizar cambios en tus aplicaciones sin afectar las versiones existentes.
+</p>
+<h1>Aplicaciones prácticas</h1>
+<li>Implementación de aplicaciones en la nube: ECR es una excelente opción para implementar aplicaciones en la nube.
+    Puedes crear una imagen de contenedor de Docker que contenga todas las dependencias de tu aplicación y luego
+    cargarla en un repositorio de ECR. Luego, puedes utilizar servicios de AWS, como Amazon Elastic Container Service
+    (ECS) o Amazon Elastic Kubernetes Service (EKS), para implementar y ejecutar tus contenedores de Docker en la nube.
+</li>
+<li>Automatización de la implementación: Con ECR, puedes automatizar la implementación de tus imágenes de Docker en la
+    nube. Puedes utilizar herramientas de automatización, como AWS CodePipeline, para detectar cambios en tus
+    repositorios de ECR y automáticamente implementar las últimas versiones de tus contenedores de Docker.
+</li>

@@ -1,4 +1,6 @@
 from flask import Flask, render_template, jsonify
+import datetime
+
 
 import os
 
@@ -48,9 +50,14 @@ def contactus():
 def list_jobs():
     return jsonify(JOBS)
 
-@app.route('/aws/<file>')
+@app.route('/aws-services/<file>')
 def aws_service(file):
-    return render_template('ejemplo_individual.html', file=file)
+    # return render_template('aws-services/' + file)
+    file_name = file.split('.')[0]
+    file_name = file_name.replace('-', ' ')
+    # Date today in format May, 2023
+    date_today = datetime.datetime.now().strftime("%B, %Y")
+    return render_template('aws-services/aws-template.html', file_name=file_name, file=file, date = date_today)
 
 @app.route('/aws-services')
 def aws():
@@ -58,11 +65,12 @@ def aws():
     # sort files by name
     jpg_files = sorted(jpg_files)
     # For each element, select what is between - and .png
-    file_names = [f.split('-')[1] for f in jpg_files]
-    file_names = [f.split('.')[0] for f in file_names]
+    file_names = [f.split('.')[0] for f in  jpg_files]
+    file_no_spaces = [f.replace(' ', '-') for f in file_names]
+    file_names = [f.split('-')[1] for f in file_names]
     file_names_no_spaces = [f.replace(' ', '-') for f in file_names]
     
-    file_info = list(zip(jpg_files, file_names, file_names_no_spaces))
+    file_info = list(zip(jpg_files, file_no_spaces, file_names, file_names_no_spaces))
     return render_template('gallery_template.html', file_info=file_info)
 
 
