@@ -1,65 +1,37 @@
 from flask import Flask, render_template, jsonify
 import datetime
-
-
 import os
 
 
 app = Flask(__name__)
 
-JOBS = [
-    {
-        "id": 1,
-        "title": "Data Analyst",
-        "location": "Bengaluru, India",
-        "salary": "Rs. 10,00,000",
-    },
-    {
-        "id": 2,
-        "title": "Data Scientist",
-        "location": "Delhi, India",
-        "salary": "Rs. 15,00,000",
-    },
-    {"id": 3, "title": "Frontend Engineer", "location": "Remote"},
-    {
-        "id": 4,
-        "title": "Backend Engineer",
-        "location": "San Francisco, USA",
-        "salary": "$150,000",
-    },
-]
-
 
 @app.route("/")
 @app.route("/index.html")
 def inicio():
-    return render_template("index.html", jobs=JOBS, company_name="Jovian")
+    return render_template("index.html", company_name="Jovian")
 
 
-@app.route("/post")
+@app.route("/post.html")
 def post():
-    return render_template("posts.html", jobs=JOBS, company_name="Jovian")
+    return render_template("posts.html", company_name="Jovian")
 
     # return render_template("base-article.html")
 
-@app.route("/contactus")
+@app.route("/contactus.html")
 def contactus():
-    return render_template("pages/contact-us.html",)
+    return render_template("contactus.html")
 
-@app.route("/api/jobs")
-def list_jobs():
-    return jsonify(JOBS)
-
-@app.route('/aws-services/<file>')
+@app.route('/aws-services/<file>.html')
 def aws_service(file):
     # return render_template('aws-services/' + file)
     file_name = file.split('.')[0]
     file_name = file_name.replace('-', ' ')
     # Date today in format May, 2023
     date_today = datetime.datetime.now().strftime("%B, %Y")
-    return render_template('aws-services/aws-template.html', file_name=file_name, file=file, date = date_today)
+    return render_template('/aws-services/aws-template.html', file_name=file_name, file=file, date = date_today)
 
-@app.route('/aws-services')
+@app.route('/aws-services.html')
 def aws():
     jpg_files = [f for f in os.listdir('static/img/aws') if f.endswith('.png')]
     # sort files by name
@@ -71,7 +43,7 @@ def aws():
     file_names_no_spaces = [f.replace(' ', '-') for f in file_names]
     
     file_info = list(zip(jpg_files, file_no_spaces, file_names, file_names_no_spaces))
-    return render_template('gallery_template.html', file_info=file_info)
+    return render_template('aws-services.html', file_info=file_info)
 
 
 
