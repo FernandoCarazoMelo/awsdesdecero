@@ -13,41 +13,57 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
 <div class="container px-4 px-lg-5">
 
     <header>
-        <h1>¡Bienvenidos a la AWS Desde Cero!</h1>
+        <h1>¡Bienvenidos a AWS Desde Cero!</h1>
         <p>Si eres un apasionado de la tecnología, sabes que la nube y los servicios en línea son cada vez más
-            importantes en el mundo de hoy. En la AWS Desde Cero, te ofrecemos una forma sencilla y amigable de aprender
-            sobre Amazon Web Services y cómo utilizarlos para impulsar tus proyectos y tus habilidades en el ámbito
-            tecnológico.</p>
+            importantes en el mundo de hoy. En AWS Desde Cero, te ofrecemos una forma sencilla y amigable de adentrarte
+            en la computación en la nube con Amazon Web Services y sus servicios principales.</p>
     </header>
 
     <img src="{{ url_for('static', filename='img/AWS-resources.png')}}" alt="AWS-resources" class="img-fluid">
     <figcaption class="figure-caption">Algunos de los servicios de Amazon Web Services.</figcaption>
-<br><br>
+    <br><br>
     <main>
         <section>
-            <h2>Todo lo que necesitas saber sobre AWS</h2>
-            <p>En nuestra plataforma, encontrarás todo lo que necesitas saber sobre AWS, desde los servicios más
+            <h2>Todo lo que necesitas saber para iniciarte con AWS</h2>
+            <p>En nuestra plataforma, encontrarás todo lo que necesitas saber para iniciarte con AWS, desde los
+                servicios más
                 populares, como Amazon S3 y EC2, hasta herramientas para el desarrollo y la gestión de aplicaciones en
-                la nube. Ya sea que estés comenzando a explorar el mundo de la nube o que quieras profundizar en tus
-                conocimientos, AWS Desde Cero te ofrece recursos útiles, consejos prácticos y guías paso a paso para que
+                la nube. Si estás en un nivel más avanzado, te ofreceremos otros recursos útiles, consejos prácticos y
+                otras webs para que
                 puedas utilizar AWS de manera efectiva y eficiente.</p>
         </section>
 
         <section>
             <h2>Nuestro compromiso contigo</h2>
             <p>Nuestro objetivo es ayudarte a comprender la nube y cómo utilizarla para mejorar tus habilidades en el
-                mundo tecnológico. En AWS Desde Cero, estamos comprometidos con tu aprendizaje constante y siempre
+                mundo tecnológico. En AWS Desde Cero, estamos comprometidos con tu aprendizaje y siempre
                 actualizamos nuestra plataforma con las últimas tecnologías y tendencias de la nube.</p>
-        </section>
-
-        <section>
-            <h2>Únete a nosotros hoy mismo</h2>
-            <p>No importa si eres un principiante o un experto, ¡únete a la AWS Desde Cero hoy mismo para empezar a
-                aprender sobre la nube y cómo utilizarla para impulsar tu carrera y tus proyectos! ¡Te esperamos!</p>
         </section>
     </main>
 </div>
 
+<div class="container px-4 px-lg-5">
+
+    <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+        {% for jpg_file, file, file_name in file_info %}
+
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
+
+            <a href=" {{ url_for('pubs', file=file)}}">
+
+                <div class="card card-medium">
+                    <img class="card-img-top" src="{{ url_for('static', filename='img/pubs/principal/' + jpg_file) }}"
+                        alt="{{ file_name }}" />
+                    <div class="card-body">
+                        <h5 class="card-title">{{ file_name }}</h5>
+                        <!-- <p class="card-text">Description of {{ file_name }}</p> -->
+                    </div>
+                </div>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 
 <div class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Características de nuestra web</h2>
@@ -59,7 +75,8 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
 
             </div>
             <h3 class="fs-2">Simplicidad</h3>
-            <p>Nos encargamos de traducir los más de 50 servicios de AWS a un lenguaje sencillo y fácil de entender.</p>
+            <p>Nos encargamos de traducir los más de 200 servicios de AWS a un lenguaje sencillo y fácil de entender.
+            </p>
         </div>
         <div class="feature col">
             <div
@@ -67,7 +84,8 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
                 <i class="bi bi-tools border-primary rounded-circle p-5"></i>
             </div>
             <h3 class="fs-2">Basado en proyectos</h3>
-            <p>Te enseñamos a utilizar los servicios de AWS en proyectos reales para que puedas aplicar tus
+            <p>Te enseñamos a entender los servicios de AWS que utilizan aplicaciones reales como Netflix o Airbnb para
+                que puedas aplicar tus
                 conocimientos de forma práctica.</p>
         </div>
         <div class="feature col">
@@ -78,15 +96,29 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
 
             </div>
             <h3 class="fs-2">Certifícate</h3>
-            <p>Te preparamos para que puedas obtener las certificaciones de AWS y así puedas demostrar tus habilidades y
-                conocimientos.</p>
+            <p>Te proporcionaremos recursos de otras webs para que puedas profundizar y obtener las certificaciones de
+                AWS. Eso es, darte alas.</p>
             </a>
         </div>
     </div>
 </div>
-<div class="container px-4 py-5" id="featured-3">
 
 
-    {% include 'graph.html' %}
+<div class="container px-4 px-lg-5">
+    <h2 class="pb-2 border-bottom">Un ejemplo</h2>
+
+    <p>Este es un ejemplo de un diagrama de AWS. También llamado diagrama de arquitectura en la nube.
+        Todavía no sabes lo que es, pero no te preocupes, lo aprenderás en el curso.
+    </p>
+
+    <p> En este tipo de diagramas, podrás ver los servicios de AWS que se utilizan en una aplicación real.</p>
+
+    <br>
+
+    <p>Puedes ampliar la imagen haciendo click y acceder a explicaciones de los distintos servicios. ¡Pruébalo tu mismo!</p>
+
+
+
+    {% include 'diagrams/00_graph_index.html' %}
 </div>
 {% endblock %}

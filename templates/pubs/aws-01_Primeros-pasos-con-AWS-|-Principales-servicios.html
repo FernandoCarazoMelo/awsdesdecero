@@ -1,0 +1,72 @@
+<h1>Primeros pasos con Amazon Web services</h1>
+<p>En este post, te explicaré cómo se organizan los servicios de AWS y qué significan los colores que los representan.
+</p>
+<p>AWS ofrece más de 200 servicios, por lo que puede ser un poco abrumador al principio. Pero no te preocupes, AWS
+    organiza los servicios por categorías y los colorea para que sea más fácil entender de qué se trata cada uno.</p>
+<p>A continuación explicaré los servicios agrupados por colores y las categorías que representan, y al final veremos un
+    caso práctico de una empresa ficticia en que se utilizarán todos estos servicios.</p>
+<blockquote>
+    <p>AWS organiza los servicios por categorías y los colorea para que sea más fácil entender de qué se trata cada uno.
+    </p>
+</blockquote>
+
+<p>¿Conoces alguno de los servicios de esta imagen? ¿Sabrías qué funcionalidad tiene este diagrama de AWS? </p>
+<br>
+
+<img src="{{ url_for('static', filename='img/pubs/body/aws-01_Aprende-AWS-desde-cero.jpg') }}" style="max-width:70%;">
+
+<p>
+    No te preocupes que iremos viendo cada uno de los servicios en detalle en próximos posts, y al final serás capáz de
+    interpretarlo. Por ahora, vamos a ver cómo se
+    agrupan los servicios de AWS.
+</p>
+
+<h2>Servicios de cómputo (Naranja)</h2>
+<p>Los servicios de cómputo son aquellos que se encargan de procesar y ejecutar código en la nube. Amazon Elastic
+    Compute Cloud (EC2) es un ejemplo de servicio de cómputo. Estos servicios están coloreados de naranja para
+    representar la velocidad y la eficiencia de la computación en la nube. </p>
+<h2>Servicios de almacenamiento (Verde)</h2>
+<p>Los servicios de almacenamiento son aquellos que se encargan de almacenar y gestionar tus datos en la nube. Amazon
+    Simple Storage Service (S3) es un ejemplo de servicio de almacenamiento. Estos servicios están coloreados de verde
+    para representar la capacidad de almacenamiento y la flexibilidad de la nube.</p>
+<h2>Servicios de base de datos (Azul)</h2>
+<p>Los servicios de base de datos son aquellos que se encargan de almacenar, gestionar y analizar datos estructurados y
+    no estructurados. Amazon Relational Database Service (RDS) es un ejemplo de servicio de base de datos. Estos
+    servicios están coloreados de azul para representar la importancia y la complejidad de la gestión de datos.</p>
+<h2>Servicios de redes (Morado)</h2>
+<p>Los servicios de redes son aquellos que se encargan de conectar tus recursos en la nube y proporcionar conectividad a
+    Internet. Elastic Load Balancing (ELB) y Amazon API Gateway son algunos ejemplos de servicios de redes. Estos
+    servicios están coloreados de morado para representar la conexión y el equilibrio de carga en la nube.</p>
+<h2>Servicios de integración entre aplicaciones (Rosa)</h2>
+<p>Los servicios de mensajería y cola son aquellos que se encargan de la comunicación entre aplicaciones y sistemas en
+    la nube. Amazon Simple Queue Service (SQS) es un ejemplo de servicio de mensajería y cola. Estos servicios están
+    coloreados de rosa para representar la comunicación y la entrega de mensajes en la nube.</p>
+<h2>Servicios de seguridad y identidad (Rojo)</h2>
+<p>Los servicios de seguridad y identidad son aquellos que se encargan de proteger tus recursos y datos en AWS. AWS
+    Identity and Access Management (IAM) o Amazon Cognito son ejemplos de servicio de seguridad y identidad. Estos
+    servicios están coloreados de rojo para representar la importancia de proteger tus datos y recursos en la nube.</p>
+<h1>Caso práctico</h1>
+<p>Imaginemos que somos una pequeña startup llamada "Food2Go" que ofrece entregas de comida a domicilio. Queremos
+    expandir nuestro negocio y mejorar nuestra plataforma en línea utilizando servicios de AWS.</p>
+<p>Nuestra plataforma de pedidos en línea se construye con una página web que muestra los distintos menús (esto se llama
+    front-end) y una serie de programas que nos permite dar funcionalidad a la web que utilizan tecnología Java y Python
+    (back-end). Queremos que nuestros clientes puedan realizar pedidos en línea de forma rápida y eficiente.</p>
+<p>Para esto, necesitamos un servicio de almacenamiento como Amazon S3 (coloreado de verde) para almacenar imágenes de
+    comida y otros recursos multimedia que utilizamos en nuestra plataforma. También utilizaremos una base de datos con
+    Amazon RDS (coloreado de azul) para almacenar la información que tenga estructura de base de datos SQL.</p>
+<p>Además, necesitamos utilizar servicios de cómputo como Amazon EC2 (coloreado de naranja) para procesar y ejecutar
+    nuestro código de manera rápida y eficiente. Amazon EC2 son servidores que permiten ejecutar programas en la nube de
+    Amazon con nuestra web front-end. La conexión entre servicios la haremos utilizando un servicio de colas con Amazon
+    Simple Queue Service (SQS), color rosa.</p>
+<p>Queremos que nuestros clientes puedan realizar pagos en línea de manera segura y eficiente. Para esto, utilizamos
+    Amazon Cognito para crear los usuarios y proteger y encriptar sus contraseñas.</p>
+<p>Para mejorar la velocidad y el rendimiento de nuestra plataforma en línea, utilizamos servicios de redes como Elastic
+    Load Balancing (ELB) (coloreado de morado) para distribuir la carga de nuestros servidores y asegurarnos de que
+    nuestros clientes puedan acceder a nuestra plataforma sin problemas.</p>
+<p>Finalmente, para proteger nuestros datos y recursos de la plataforma, utilizamos servicios de seguridad y identidad
+    como AWS IAM (coloreado de rojo).</p>
+<p>Con estos servicios de AWS, nuestra plataforma en línea se vuelve más rápida, eficiente y segura, lo que a su vez nos
+    ayuda a expandir nuestro negocio de entregas de comida a domicilio y ofrecer una experiencia aún mejor a nuestros
+    clientes.</p>
+<p>Espero que esta información te haya sido útil para entender cómo se organizan los servicios de AWS. En próximos
+    posts, profundizaremos en cada categoría de servicios y te explicaremos cómo utilizarlos. ¡Mantente atento!</p>

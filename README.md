@@ -2,6 +2,11 @@
 
 Este es un proyecto que tiene como objetivo enseñar a los usuarios a crear proyectos en AWS desde cero. La web está escrita en español y utiliza Flask como framework de desarrollo. Además, se pueden generar los archivos estáticos utilizando Frozen Flask.
 
+## Para crear un nuevo post
+
+1. Crear una imagen en `static/img/pubs/principal` con el nombre `aws-<numero>_<descripcion-con-guiones>.jpg`. El número debe ser el siguiente al último post creado. 
+2. Crar un archivo en `templates/pubs` con el nombre `aws-<numero>_<descripcion-con-guiones>.html`.
+
 ## Requisitos
 
 Antes de comenzar, es necesario tener instalados los siguientes programas en tu computadora:

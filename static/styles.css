@@ -4730,6 +4730,12 @@ fieldset:disabled .btn {
   height: 350px;
 }
 
+.card-medium {
+  font-size: 18px;
+  width: 300px;
+  height: 340px;
+}
+
 
 .card-body {
   flex: 1 1 auto;
