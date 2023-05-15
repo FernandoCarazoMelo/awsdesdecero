@@ -35,6 +35,19 @@ def aws_service():
     for file in file_no_spaces:
         yield {'file': file}
 
+@freezer.register_generator
+def pubs():
+    # return render_template('aws-services/' + file)
+    jpg_files = [f for f in os.listdir('static/img/pubs/principal') if f.endswith('.jpg')]
+    # sort files by name
+    jpg_files = sorted(jpg_files)
+    # Get file names
+    file = [f.split('.')[0] for f in  jpg_files]
+    file_names = [f.split('.')[0] for f in  jpg_files]
+    
+    for file in file_names:
+        yield {'file': file}
+
     
 if __name__ == '__main__':
     freezer.freeze()
