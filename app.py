@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index.html")
 def inicio():
-    jpg_files = [f for f in os.listdir('static/img/pubs/principal') if f.endswith('.jpg')]
+    jpg_files = [f for f in os.listdir('static/img/pubs/principal')]
     # sort files by name
     jpg_files = sorted(jpg_files)
     # For each element, select what is between - and .png
@@ -56,7 +56,6 @@ def aws():
 
 @app.route('/pubs/<file>.html')
 def pubs(file):
-    # return render_template('aws-services/' + file)
     file_name = file.split('.')[0]
     file_name = file_name.replace('-', ' ')
     # Date today in format May, 2023
