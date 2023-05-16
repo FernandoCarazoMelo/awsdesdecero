@@ -7,45 +7,46 @@ Contacta
 {% block content %}
 
 <div class=" col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 ">
-  
 
-  <p>Si necesitas ayuda o consejo, estoy encantado de ayudarte.</p>
+  <div class="container-fluid">
 
 
-  <div style="text-align: center;">
-    <a href="https://calendly.com/fcarazo/meeting" target="_blank">
-      <button type="button" href="https://calendly.com/fcarazo/meeting" class="btn btn-success rounded-pill px-3">Solicita una Reunión</button>
-    </a>
+    <p>Si te gustaría certificarte y no sabes por dónde empezar o necesitas ayuda para diseñar una solución en la nube, estoy encantado de ayudarte.</p>
+
+
+    <!-- <div style="text-align: center;">
+      <a href="https://calendly.com/fcarazo/meeting" target="_blank">
+        <button type="button" href="https://calendly.com/fcarazo/meeting"
+          class="btn btn-success rounded-pill px-3">Solicita una Reunión</button>
+      </a>
+    </div> -->
+    <p>Puedes escribirme un email:</p>
+
+
+    <form action="https://submit-form.com/zSTfetIb" id="contact-form">
+      <div class="row">
+        <div class="col-6">
+          <input type="text" id="name" name="name" placeholder="Name" required="" class="form-control input-lg"
+            style="margin-bottom: 15px;" />
+        </div>
+        <div class="col-6">
+          <input type="email" id="email" name="email" placeholder="Email" required="" class="form-control input-lg"
+            style="margin-bottom: 15px;" />
+        </div>
+      </div>
+
+      <textarea id="message" name="message" placeholder="Message" required="" class="form-control input-lg"
+        style="margin-bottom: 15px;"></textarea>
+      <button type="submit" class="btn btn-lg btn-primary">Send</button>
+    </form>
+    <br>
+
+
+
+
+
   </div>
-  <p>También puedes escribirme un email:</p>
-
-
-  <form action="https://submit-form.com/zSTfetIb" id="contact-form">
-    <div class="row">
-      <div class="col-6">
-        <input type="text" id="name" name="name" placeholder="Name" required="" class="form-control input-lg" style="margin-bottom: 15px;"/>
-      </div>
-      <div class="col-6">
-        <input type="email" id="email" name="email" placeholder="Email" required="" class="form-control input-lg" style="margin-bottom: 15px;"/>
-      </div>
-    </div>
-
-    <textarea
-      id="message"
-      name="message"
-      placeholder="Message"
-      required=""
-      class="form-control input-lg"
-      style="margin-bottom: 15px;"
-    ></textarea>
-    <button type="submit" class="btn btn-lg btn-primary" >Send</button>
-  </form>
-  <br>
-  
-
-
-
-
 </div>
+
 
 {% endblock %}
