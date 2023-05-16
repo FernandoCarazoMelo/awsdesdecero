@@ -11,7 +11,7 @@ app = Flask(__name__)
 def inicio():
     jpg_files = [f for f in os.listdir('static/img/pubs/principal')]
     # sort files by name
-    jpg_files = sorted(jpg_files)
+    jpg_files = sorted(jpg_files, reverse=True)
     # For each element, select what is between - and .png
     file = [f.split('.')[0] for f in  jpg_files]
     file_names = [f.split('.')[0] for f in  jpg_files]
