@@ -33,11 +33,12 @@ def contactus():
 @app.route('/aws-services/<file>.html')
 def aws_service(file):
     # return render_template('aws-services/' + file)
+    file_jpg = file
     file_name = file.split('.')[0]
     file_name = file_name.replace('-', ' ')
     # Date today in format May, 2023
     date_today = datetime.datetime.now().strftime("%B, %Y")
-    return render_template('/aws-services/aws-template.html', file_name=file_name, file=file, date = date_today)
+    return render_template('/aws-services/aws-template.html', file_name=file_name, file=file, date = date_today, file_jpg=file_jpg)
 
 @app.route('/aws-services.html')
 def aws():
@@ -46,7 +47,7 @@ def aws():
     jpg_files = sorted(jpg_files)
     # For each element, select what is between - and .png
     file_names = [f.split('.')[0] for f in  jpg_files]
-    file_no_spaces = [f.replace(' ', '-') for f in file_names]
+    file_no_spaces = [f.replace(' ', '-') for f in  file_names]
     file_names = [f.split('-')[1] for f in file_names]
     file_names_no_spaces = [f.replace(' ', '-') for f in file_names]
     
