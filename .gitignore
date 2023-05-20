@@ -1,2 +1,4 @@
 build/
 __pycache__/
+aux_code_github_tutorial
+.DS_Store
