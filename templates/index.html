@@ -1,7 +1,12 @@
 {% extends "base_template.html" %}
 
 {% block title %}
-AWS Desde Cero
+
+<p style="text-align:center">
+    AWS <br>
+    Desde Cero
+</p>
+
 {% endblock %}
 
 {% block subtitle %}
@@ -49,7 +54,7 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
             <div class="feature-icon mb-3">
                 <img src="{{ url_for('static', filename='img/simple.png') }}" alt="" class="img-fluid" style="max-height: 250px;">
             </div>
-            <h3 class="fs-2">Sencillo</h3>
+            <h3 class="fs-2">Sencilla</h3>
             <p>Nos encargamos de traducir los más de 200 servicios de AWS a un lenguaje sencillo y fácil de entender.
             </p>
         </div>
@@ -57,7 +62,7 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
             <div class="feature-icon mb-3">
                 <img src="{{ url_for('static', filename='img/project.png') }}" alt="" class="img-fluid" style="max-height: 250px;">
             </div>
-            <h3 class="fs-2">Basado en proyectos</h3>
+            <h3 class="fs-2">Basada en proyectos</h3>
             <p>Te enseñamos a entender los servicios de AWS que utilizan aplicaciones reales como Netflix o Airbnb para
                 que puedas aplicar tus conocimientos de forma práctica.</p>
         </div>
@@ -67,7 +72,7 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
             </div>
             <h3 class="fs-2">Certifícate</h3>
             <p>Te proporcionaremos recursos de otras webs para que puedas profundizar y obtener las certificaciones de
-                AWS. Eso es, darte alas.</p>
+                AWS. En resumen, ¡Queremos darte alas!.</p>
         </div>
     </div>
 </div>
@@ -81,7 +86,7 @@ Aprendizaje en la nube - Aprende, practica, certifícate en AWS
     <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
         {% for jpg_file, file, file_name in file_info %}
 
-        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4">
+        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4">
 
             <a href=" {{ url_for('pubs', file=file)}}">
 
