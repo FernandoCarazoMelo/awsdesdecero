@@ -1,0 +1,52 @@
+{% extends "base_template.html" %}
+
+{% block title %}
+    <p style="text-align:center">
+        Test de AWS
+    </p>
+{% endblock %}
+
+{% block content %}
+<div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
+    <div class="container-fluid">
+        <h1>Test de AWS</h1>
+        <form action="/submit" method="post">
+            <p>Pregunta 1: ¿Qué significa AWS?</p>
+            <input type="radio" name="q1" value="a"> a) Amazon Web Services<br>
+            <input type="radio" name="q1" value="b"> b) Advanced Web Solutions<br>
+            <input type="radio" name="q1" value="c"> c) Associated Web Servers<br>
+
+            <p>Pregunta 2: ¿Cuál es el servicio de almacenamiento de objetos en AWS?</p>
+            <input type="radio" name="q2" value="a"> a) S3<br>
+            <input type="radio" name="q2" value="b"> b) EC2<br>
+            <input type="radio" name="q2" value="c"> c) RDS<br>
+
+            <p>Pregunta 3: ¿Qué servicio de AWS se utiliza para ejecutar código sin aprovisionar servidores?</p>
+            <input type="radio" name="q3" value="a"> a) Lambda<br>
+            <input type="radio" name="q3" value="b"> b) S3<br>
+            <input type="radio" name="q3" value="c"> c) DynamoDB<br>
+
+            <p>Pregunta 4: ¿Cuál de los siguientes servicios permite el envío de emails en AWS?</p>
+            <input type="radio" name="q4" value="a"> a) SES<br>
+            <input type="radio" name="q4" value="b"> b) SQS<br>
+            <input type="radio" name="q4" value="c"> c) CloudFront<br>
+
+            <p>Pregunta 5: ¿Cuál es el servicio de base de datos relacional en AWS?</p>
+            <input type="radio" name="q5" value="a"> a) RDS<br>
+            <input type="radio" name="q5" value="b"> b) Redshift<br>
+            <input type="radio" name="q5" value="c"> c) ElastiCache<br>
+
+            <br>
+            <input type="submit" value="Enviar">
+        </form>
+
+    
+        <p></p>
+        {% if score %}
+            <div class="alert alert-info">
+                Tu puntuación es: {{ score }}/{{ len_preguntas }}
+            </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
