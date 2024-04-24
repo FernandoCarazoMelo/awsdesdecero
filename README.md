@@ -7,6 +7,8 @@ La creación de esta web está automatizada mediante plantillas Flask y workflow
 
 1. Crear una imagen en `static/img/pubs/principal` con el nombre `aws-<numero>_<descripcion-con-guiones>.jpg`. El número debe ser el siguiente al último post creado. 
 2. Crar un archivo en `templates/pubs` con el nombre `aws-<numero>_<descripcion-con-guiones>.html`.
+3. Añade todas las imágenes que quieras crear en la carpeta `static/img/inside-pubs/<nombre>`. 
+4. Añade los diagramas que quieras crear en la carpeta `templates/diagrams/<nombre-del-diagrama>`. Referencialos con `{% include 'diagrams/01_Food2Go.html' %}`.
 
 ## Requisitos
 
