@@ -16,7 +16,7 @@ Antes de comenzar, es necesario tener instalados los siguientes programas:
 - Flask
 - Frozen Flask
 
-## Cómo ejecutar el proyecto
+## Desarrollo
 
 1. Clona este repositorio:
 
@@ -34,14 +34,17 @@ source env/bin/activate
 4. Instala las dependencias:
 pip install -r requirements.txt
 
-5. Genera los archivos estáticos:
+5. Ejecuta la aplicación Flask:
+flask run  --debug --reload
 
-flask freeze
+6. Accede a la página web en tu navegador web en la dirección http://localhost:5000/
 
-6. Ejecuta la aplicación:
-flask run
 
-7. Accede a la página web en tu navegador web en la dirección http://localhost:5000/
+## Despliegue
+
+1. Genera los archivos estáticos:
+python freeze.py
+
 
 ## Autor
 

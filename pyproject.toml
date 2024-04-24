@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "awsdesdecero"
+version = "0.1.0"
+description = ""
+authors = ["Fernando Carazo <fernando.carazom@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+flask = "^3.0.3"
+gunicorn = "^22.0.0"
+frozen-flask = "^1.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
