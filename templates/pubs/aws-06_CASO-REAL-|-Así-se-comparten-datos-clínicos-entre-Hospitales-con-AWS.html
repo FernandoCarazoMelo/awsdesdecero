@@ -1,0 +1,49 @@
+<h1>Facilitando la Investigación Médica: Compartiendo Datos entre Hospitales Europeos con AWS</h1>
+<p>En el mundo de la investigación médica, la colaboración y el intercambio de datos son esenciales para avanzar en el conocimiento y encontrar soluciones a desafíos de salud cada vez más complejos. En Europa, varios hospitales y centros de investigación están uniendo fuerzas en proyectos conjuntos, aprovechando la tecnología de la nube de Amazon Web Services (AWS) para compartir datos de manera segura y eficiente. Un ejemplo real ilustra cómo esta colaboración se materializa en la práctica.
+</p>
+<img
+src="{{ url_for('static', filename='img/inside-pubs/aws-06_quiron.jpg') }}"
+style="max-width: 50%"
+/>
+<p style="color: gray; text-align: center">Ejemplo de projecto C-salud Quirón.</p>
+<p></p>
+
+
+<h2>Arquitectura de la Nube AWS</h2>
+
+<p>Este diagrama de arquitectura presenta cómo los hospitales europeos comparten datos utilizando AWS para avanzar en la investigación médica. A continuación, desglosamos los 8 pasos de este proceso:</p>
+
+<img
+  src="{{ url_for('static', filename='img/inside-pubs/aws-06_arquitectura.png') }}"
+  style="max-width: 70%"
+/>
+<p style="color: gray; text-align: center">Arquitectura Cloud de colaboración hospitalaria.</p>
+<p></p>
+
+<ol>
+    <li><strong>Recolección de Datos en el Hospital:</strong> Un técnico de laboratorio lleva a cabo un experimento y los resultados se guardan en una carpeta en un servidor de archivos local. Para asegurar la integridad y disponibilidad de estos datos, se utiliza AWS DataSync para sincronizar los datos desde el almacenamiento local hasta un bucket en Amazon Simple Storage Service (Amazon S3).</li>
+    <li><strong>Transferencia Segura a la Nube:</strong> Los datos se transfieren a la nube de AWS utilizando una conexión segura, ya sea a través de internet o mediante una conexión directa de baja latencia, como AWS Direct Connect. Esta medida garantiza la seguridad y la velocidad en el intercambio de datos sensibles.</li>
+    <li><strong>Acceso a los Datos para Investigadores:</strong> Los investigadores pueden acceder a los datos almacenados en Amazon S3 utilizando herramientas bioinformáticas existentes a través del Protocolo de Sistema de Archivos en Red (NFS) o el Protocolo de Mensajes de Servidor (SMB) mediante Amazon S3 File Gateway. Esto facilita el análisis y la interpretación de los datos sin necesidad de migrar a nuevas plataformas.</li>
+    <li><strong>Colaboración con Entidades Asociadas:</strong> Entidades asociadas, como organizaciones de investigación contratadas (CRO), pueden cargar resultados de estudios directamente en Amazon S3 utilizando AWS Transfer para FTP, SFTP o FTPS. Esto simplifica el proceso de colaboración y asegura que todos los datos relevantes estén centralizados en un solo lugar.</li>
+    <li><strong>Optimización de Almacenamiento:</strong> Para optimizar el almacenamiento, se implementan políticas de ciclo de vida en los buckets de Amazon S3, transfiriendo datos a Amazon S3 Glacier según los patrones de acceso. Esto garantiza un almacenamiento eficiente y rentable a largo plazo.</li>
+    <li><strong>Acceso a Computación de Alto Rendimiento (HPC):</strong> Mediante Amazon FSx for Lustre, los datos se hacen accesibles para la computación de alto rendimiento en la nube (HPC) para cargas de trabajo genómicas, de imágenes y otras tareas intensivas. Esto proporciona un sistema de archivos compartido de baja latencia, crucial para el análisis rápido y preciso de datos médicos complejos.</li>
+    <li><strong>Orquestación de Cargas de Trabajo:</strong> Las cargas de trabajo de HPC se orquestan en la nube utilizando AWS Step Functions y AWS Batch, lo que permite una computación flexible en instancias de Amazon Elastic Compute Cloud (Amazon EC2) o contenedores de Amazon Elastic Container Service (Amazon ECS). Esta flexibilidad garantiza que los recursos computacionales se asignen de manera eficiente según las necesidades del proyecto.</li>
+    <li><strong>Implementación de Aprendizaje Automático:</strong> Finalmente, el aprendizaje automático (ML) se lleva a cabo utilizando herramientas comunes de inteligencia artificial y aprendizaje automático, como Amazon SageMaker. Esta plataforma permite el entrenamiento, despliegue y operación de modelos de ML de manera eficiente. Además, Amazon Athena se utiliza para consultas SQL flexibles, integrando fácilmente los datos con herramientas de análisis existentes.</li>
+</ol>
+
+<h2>Glosario de Servicios de AWS:</h2>
+<ul>
+    <li><strong>AWS DataSync:</strong> Servicio para transferir datos de forma rápida y segura entre almacenamiento local y Amazon S3.</li>
+    <li><strong>AWS Direct Connect:</strong> Conexión dedicada desde las instalaciones del cliente a AWS, evitando la internet pública para mayor seguridad y rendimiento.</li>
+    <li><strong>Amazon S3 File Gateway:</strong> Permite el acceso a datos almacenados en Amazon S3 a través de protocolos de archivos estándar como NFS y SMB.</li>
+    <li><strong>AWS Transfer for FTP:</strong> Servicio totalmente administrado que permite transferencias seguras de archivos a y desde Amazon S3 a través de FTP.</li>
+    <li><strong>Amazon S3 Glacier:</strong> Servicio de almacenamiento de archivos a largo plazo y económico para datos archivados.</li>
+    <li><strong>Amazon FSx for Lustre:</strong> Ofrece un sistema de archivos de alto rendimiento optimizado para cargas de trabajo de HPC.</li>
+    <li><strong>AWS Step Functions:</strong> Coordina y administra las cargas de trabajo de múltiples servicios de AWS como una serie de pasos.</li>
+    <li><strong>AWS Batch:</strong> Permite la ejecución eficiente de cargas de trabajo de computación a gran escala en la nube.</li>
+    <li><strong>Amazon SageMaker:</strong> Servicio integral para construir, entrenar y desplegar modelos de aprendizaje automático.</li>
+    <li><strong>Amazon Athena:</strong> Servicio de consulta interactiva que facilita el análisis de datos en Amazon S3 utilizando SQL estándar.</li>
+</ul>
+
+
+
