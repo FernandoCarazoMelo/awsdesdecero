@@ -1,125 +1,144 @@
-{% extends "base_template.html" %}
+{% extends "base_template.html" %} {% block title %}
 
-{% block title %}
-
-<p style="text-align:center">
-    AWS <br>
-    Desde Cero
+<p style="text-align: center">
+  AWS <br />
+  Desde Cero
 </p>
 
-{% endblock %}
-
-{% block subtitle %}
-Aprendizaje en la nube - Aprende, practica, iníciate en AWS
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block subtitle %} Aprendizaje en la nube - Aprende, practica,
+iníciate en AWS {% endblock %} {% block content %}
 
 <div class="container px-4 px-lg-5">
+  <header>
+    <h1>¡Bienvenido a AWSDesdeCero!</h1>
 
-    <header>
-        <h1>¡Bienvenidos a AWSDesdeCero!</h1>
-        <p>Si eres un apasionado de la tecnología, sabes que la nube y los servicios en línea son cada vez más
-            importantes en el mundo de hoy. En AWSDesdeCero, te ofrecemos una forma sencilla y amigable de adentrarte
-            en la computación en la nube con Amazon Web Services y sus servicios principales.</p>
-    </header>
+    <h3>Una web diseñada para líderes y gestores de productos tecnológicos.</h3>
+    <p>
+      Hoy en día, empresas de todos los tamaños y sectores utilizan servicios cloud como
+      Amazon Web Services o Google Cloud Platform.
+    </p>
 
-    <img src="{{ url_for('static', filename='img/AWS-resources.png')}}" alt="AWS-resources" class="img-fluid">
-    <figcaption class="figure-caption">Algunos de los servicios de Amazon Web Services.</figcaption>
-    <br><br>
-    <main>
-        <section>
-            <h2>Todo lo que necesitas saber para iniciarte con AWS</h2>
-            <p>En nuestra plataforma, encontrarás todo lo que necesitas saber para iniciarte con AWS, desde los
-                servicios más
-                populares, como Amazon S3 y EC2, hasta herramientas para el desarrollo y la gestión de aplicaciones en
-                la nube. Si estás en un nivel más avanzado, te ofreceremos otros recursos útiles, consejos prácticos y
-                otras webs para que
-                puedas utilizar AWS de manera efectiva y eficiente.</p>
-        </section>
+    <p>
+      En AWSDesdeCero, te ofrecemos una forma sencilla y amigable de adentrarte
+      en la computación en la nube con Amazon Web Services.
 
-        <section>
-            <h2>Nuestro compromiso contigo</h2>
-            <p>Nuestro objetivo es ayudarte a comprender la nube y cómo utilizarla para mejorar tus habilidades en el
-                mundo tecnológico. En AWS Desde Cero, estamos comprometidos con tu aprendizaje y siempre
-                actualizamos nuestra plataforma con las últimas tecnologías y tendencias de la nube.</p>
-        </section>
-    </main>
+      Nuestro objetivo no es profundizar en la parte técnica de AWS, sino
+      ofrecerte una visión general de los servicios más populares y qué papel
+      juegan en distintas aplicaciones.
+    </p>
+  </header>
+
+  <img
+    src="{{ url_for('static', filename='img/AWS-resources.png')}}"
+    alt="AWS-resources"
+    class="img-fluid"
+  />
+  <figcaption class="figure-caption">
+    Algunos de los servicios de Amazon Web Services.
+  </figcaption>
+  <br /><br />
+  <main>
+  </main>
 </div>
 
 <div class="container px-4 py-5" id="featured-3">
-    <h2 class="pb-2 border-bottom">Características de nuestra web</h2>
-    <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 align-items-stretch">
-        <div class="feature col">
-            <div class="feature-icon mb-3">
-                <img src="{{ url_for('static', filename='img/simple.png') }}" alt="" class="img-fluid" style="max-height: 250px;">
-            </div>
-            <h3 class="fs-2">Sencilla</h3>
-            <p>Nos encargamos de traducir los más de 200 servicios de AWS a un lenguaje sencillo y fácil de entender.
-            </p>
-        </div>
-        <div class="feature col">
-            <div class="feature-icon mb-3">
-                <img src="{{ url_for('static', filename='img/project.png') }}" alt="" class="img-fluid" style="max-height: 250px;">
-            </div>
-            <h3 class="fs-2">Basada en proyectos</h3>
-            <p>Te enseñamos a entender los servicios de AWS que utilizan aplicaciones reales como Netflix o Airbnb para
-                que puedas aplicar tus conocimientos de forma práctica.</p>
-        </div>
-        <div class="feature col">
-            <div class="feature-icon mb-3">
-                <img src="{{ url_for('static', filename='img/certificate.png') }}" alt="" class="img-fluid" style="max-height: 250px;">
-            </div>
-            <h3 class="fs-2">Certifícate</h3>
-            <p>Te proporcionaremos recursos de otras webs para que puedas profundizar y obtener las certificaciones de
-                AWS. En resumen, ¡Queremos darte alas!.</p>
-        </div>
+  <h2 class="pb-2 border-bottom">Características de nuestra web</h2>
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3 align-items-stretch">
+    <div class="feature col">
+      <div class="feature-icon mb-3">
+        <img
+          src="{{ url_for('static', filename='img/simple.png') }}"
+          alt=""
+          class="img-fluid"
+          style="max-height: 250px"
+        />
+      </div>
+      <h3 class="fs-2">Sencilla</h3>
+      <p>
+        Nos encargamos de traducir los más de 200 servicios de AWS a un lenguaje
+        sencillo y fácil de entender.
+      </p>
     </div>
+    <div class="feature col">
+      <div class="feature-icon mb-3">
+        <img
+          src="{{ url_for('static', filename='img/project.png') }}"
+          alt=""
+          class="img-fluid"
+          style="max-height: 250px"
+        />
+      </div>
+      <h3 class="fs-2">Basada en proyectos</h3>
+      <p>
+        Te enseñamos a entender los servicios de AWS que utilizan aplicaciones
+        reales como Netflix o Airbnb para que puedas aplicar tus conocimientos
+        de forma práctica.
+      </p>
+    </div>
+    <div class="feature col">
+      <div class="feature-icon mb-3">
+        <img
+          src="{{ url_for('static', filename='img/certificate.png') }}"
+          alt=""
+          class="img-fluid"
+          style="max-height: 250px"
+        />
+      </div>
+      <h3 class="fs-2">Certifícate</h3>
+      <p>
+        Te proporcionaremos recursos de otras webs para que puedas profundizar y
+        obtener las certificaciones de AWS. En resumen, ¡Queremos darte alas!.
+      </p>
+    </div>
+  </div>
 </div>
 
-
 <div class="container px-4 px-lg-5">
+  <h2 class="pb-2 border-bottom">Últimos Posts</h2>
 
-    <h2 class="pb-2 border-bottom">Últimos Posts</h2>
+  <div class="row" data-masonry='{"percentPosition": true }'>
+    {% for jpg_file, file, file_name in file_info %}
 
-
-    <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
-        {% for jpg_file, file, file_name in file_info %}
-
-        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4">
-
-            <a href=" {{ url_for('pubs', file=file)}}">
-
-                <div class="card card-medium">
-                    <img class="card-img-top" src="{{ url_for('static', filename='img/pubs/principal/' + jpg_file) }}"
-                        alt="{{ file_name }}" />
-                    <div class="card-body">
-                        <h5 class="card-title">{{ file_name }}</h5>
-                        <!-- <p class="card-text">Description of {{ file_name }}</p> -->
-                    </div>
-                </div>
-            </a>
+    <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 mb-4">
+      <a href=" {{ url_for('pubs', file=file)}}">
+        <div class="card card-medium">
+          <img
+            class="card-img-top"
+            src="{{ url_for('static', filename='img/pubs/principal/' + jpg_file) }}"
+            alt="{{ file_name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ file_name }}</h5>
+            <!-- <p class="card-text">Description of {{ file_name }}</p> -->
+          </div>
         </div>
-        {% endfor %}
+      </a>
     </div>
+    {% endfor %}
+  </div>
 </div>
 
-
 <div class="container px-4 px-lg-5">
-    <h2 class="pb-2 border-bottom">Un ejemplo</h2>
+  <h2 class="pb-2 border-bottom">Un ejemplo</h2>
 
-    <p>Este es un ejemplo de un diagrama de AWS. También llamado diagrama de arquitectura en la nube.
-        Todavía no sabes lo que es, pero no te preocupes, lo aprenderás en el curso.
+  <p>
+    Este es un ejemplo de un diagrama de AWS. También llamado diagrama de
+    arquitectura en la nube. Todavía no sabes lo que es, pero no te preocupes,
+    lo aprenderás en el curso.
+  </p>
+
+  <p>
+    En este tipo de diagramas, podrás ver los servicios de AWS que se utilizan
+    en una aplicación real.
+  </p>
+
+  <blockquote class="blockquote">
+    <p class="mb-0">
+      Diagrama de AWS. Puedes ampliar la imagen haciendo click y acceder a
+      explicaciones de los distintos servicios. ¡Pruébalo tu mismo!
     </p>
+  </blockquote>
 
-    <p> En este tipo de diagramas, podrás ver los servicios de AWS que se utilizan en una aplicación real.</p>
-
-    <blockquote class="blockquote">
-        <p class="mb-0">Diagrama de AWS. Puedes ampliar la imagen haciendo click y acceder a explicaciones de los distintos servicios. ¡Pruébalo tu mismo!</p>
-      </blockquote>
-
-
-
-    {% include 'diagrams/00_graph_index.html' %}
+  {% include 'diagrams/00_graph_index.html' %}
 </div>
 {% endblock %}
