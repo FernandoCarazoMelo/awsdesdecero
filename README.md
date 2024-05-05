@@ -50,7 +50,7 @@ python freeze.py
 
 ## Autor
 
-Este proyecto fue creado por [Fernando Carazo](https://github.com/FernandoCarazoMelo/). Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo a través de mi correo electrónico o mi perfil de GitHub.
+Este proyecto fué creado por [Fernando Carazo](https://github.com/FernandoCarazoMelo/). Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo a través de mi correo electrónico o mi perfil de GitHub.
 
 ## Licencia
 
