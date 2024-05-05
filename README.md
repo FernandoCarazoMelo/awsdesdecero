@@ -41,8 +41,7 @@ flask run  --debug --reload
 
 6. Accede a la página web en tu navegador web en la dirección http://localhost:5000/
 
-
-## Despliegue
+## Despliegue 
 
 1. Genera los archivos estáticos:
 python freeze.py
